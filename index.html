@@ -47,82 +47,114 @@
                 </a>
         </nav>
     </header>
+    <img src="imagem/Shop.png">
     <div class="filter">
-        <span>Showing 1–16 of 32 results</span>
+        <span>Showing 1–<span id="total-results">16</span> of <span id="total-count">32</span> results</span>
         <div class="show">
             <label for="show">Show</label>
-            <select id="show" name="show">
-                <option value="16">16</option>
-                <option value="32">32</option>
-                <option value="48">48</option>
-            </select>
+            <input type="number" id="show" name="show" min="1" value="16">
         </div>
     </div>
-    <button onclick="sortProducts('name')">Ordenar por Nome (A-Z)</button>
+    <div id="products" class="products-grid"></div>
+    <div class="pagination">
+        <button id="prev-page">anterior</button>
+        <button id="next-page">proxima</button>
+    </div>
+    <div id="page-info"></div>
+    <button onclick="sortProducts('name')">Ordem Alfabética (A-Z)</button>
     <button onclick="sortProducts('price')">Ordenar por Preço (menor para o maior)</button>
     <div id="products">
         <div class="products-grid">
         <div class="product">
             <img src="imagem/produto1.png" alt="Syltherine">
-            <h2>Syltherine</h2>
+            <h2>Syltherine A 3</h2>
             <p>Stylish cafe chair</p>
-            <span class="price">Rp 2.500.000</span>
+            <span class="price">Rp 2.400.000</span>
             <span class="old-price">Rp 3.500.000</span>
             <span class="discount">-30%</span>
         </div>
         <div class="product">
             <img src="imagem/produto2.png" alt="Leviosa">
-            <h2>Leviosa</h2>
+            <h2>Leviosa C 2</h2>
             <p>Stylish cafe chair</p>
-            <span class="price">Rp 2.500.000</span>
+            <span class="price">Rp 2.000.000</span>
         </div>
         <div class="product">
             <img src="imagem/produto3.png" alt="Lolito">
-            <h2>Lolito</h2>
+            <h2>Lolito A 3</h2>
             <p>Luxury big sofa</p>
-            <span class="price">Rp 7.000.000</span>
+            <span class="price">Rp 7.300.000</span>
             <span class="old-price">Rp 14.000.000</span>
             <span class="discount">-50%</span>
         </div>
         <div class="product">
             <img src="imagem/produto4.png" alt="Respira">
-            <h2>Respira</h2>
+            <h2>Respira B 4</h2>
+            <p>Outdoor bar table and stool</p>
+            <span class="price">Rp 530.000</span>
+            <span class="new">New</span>
+        </div>
+        <div class="product">
+            <img src="imagem/produto1.png" alt="Syltherine">
+            <h2>Syltherine D 1</h2>
+            <p>Stylish cafe chair</p>
+            <span class="price">Rp 2.700.000</span>
+            <span class="old-price">Rp 3.500.000</span>
+            <span class="discount">-30%</span>
+        </div>
+        <div class="product">
+            <img src="imagem/produto2.png" alt="Leviosa">
+            <h2>Leviosa B 1</h2>
+            <p>Stylish cafe chair</p>
+            <span class="price">Rp 2.200.000</span>
+        </div>
+        <div class="product">
+            <img src="imagem/produto3.png" alt="Lolito">
+            <h2>Lolito C 1</h2>
+            <p>Luxury big sofa</p>
+            <span class="price">Rp 7.200.000</span>
+            <span class="old-price">Rp 14.000.000</span>
+            <span class="discount">-50%</span>
+        </div>
+        <div class="product">
+            <img src="imagem/produto4.png" alt="Respira">
+            <h2>Respira D 3</h2>
             <p>Outdoor bar table and stool</p>
             <span class="price">Rp 500.000</span>
             <span class="new">New</span>
         </div>
         <div class="product">
             <img src="imagem/produto1.png" alt="Syltherine">
-            <h2>Syltherine</h2>
+            <h2>Syltherine B 2</h2>
             <p>Stylish cafe chair</p>
-            <span class="price">Rp 2.500.000</span>
+            <span class="price">Rp 2.600.000</span>
             <span class="old-price">Rp 3.500.000</span>
             <span class="discount">-30%</span>
         </div>
         <div class="product">
             <img src="imagem/produto2.png" alt="Leviosa">
-            <h2>Leviosa</h2>
+            <h2>Leviosa A 3</h2>
             <p>Stylish cafe chair</p>
-            <span class="price">Rp 2.500.000</span>
+            <span class="price">Rp 2.100.000</span>
         </div>
         <div class="product">
             <img src="imagem/produto3.png" alt="Lolito">
-            <h2>Lolito</h2>
+            <h2>Lolito B 4</h2>
             <p>Luxury big sofa</p>
-            <span class="price">Rp 7.000.000</span>
+            <span class="price">Rp 7.100.000</span>
             <span class="old-price">Rp 14.000.000</span>
             <span class="discount">-50%</span>
         </div>
         <div class="product">
             <img src="imagem/produto4.png" alt="Respira">
-            <h2>Respira</h2>
+            <h2>Respira C 1</h2>
             <p>Outdoor bar table and stool</p>
-            <span class="price">Rp 500.000</span>
+            <span class="price">Rp 520.000</span>
             <span class="new">New</span>
         </div>
         <div class="product">
             <img src="imagem/produto1.png" alt="Syltherine">
-            <h2>Syltherine</h2>
+            <h2>Syltherine C 4</h2>
             <p>Stylish cafe chair</p>
             <span class="price">Rp 2.500.000</span>
             <span class="old-price">Rp 3.500.000</span>
@@ -130,13 +162,13 @@
         </div>
         <div class="product">
             <img src="imagem/produto2.png" alt="Leviosa">
-            <h2>Leviosa</h2>
+            <h2>Leviosa D 4</h2>
             <p>Stylish cafe chair</p>
-            <span class="price">Rp 2.500.000</span>
+            <span class="price">Rp 2.300.000</span>
         </div>
         <div class="product">
             <img src="imagem/produto3.png" alt="Lolito">
-            <h2>Lolito</h2>
+            <h2>Lolito D 2</h2>
             <p>Luxury big sofa</p>
             <span class="price">Rp 7.000.000</span>
             <span class="old-price">Rp 14.000.000</span>
@@ -144,50 +176,13 @@
         </div>
         <div class="product">
             <img src="imagem/produto4.png" alt="Respira">
-            <h2>Respira</h2>
+            <h2>Respira A 2</h2>
             <p>Outdoor bar table and stool</p>
-            <span class="price">Rp 500.000</span>
-            <span class="new">New</span>
-        </div>
-        <div class="product">
-            <img src="imagem/produto1.png" alt="Syltherine">
-            <h2>Syltherine</h2>
-            <p>Stylish cafe chair</p>
-            <span class="price">Rp 2.500.000</span>
-            <span class="old-price">Rp 3.500.000</span>
-            <span class="discount">-30%</span>
-        </div>
-        <div class="product">
-            <img src="imagem/produto2.png" alt="Leviosa">
-            <h2>Leviosa</h2>
-            <p>Stylish cafe chair</p>
-            <span class="price">Rp 2.500.000</span>
-        </div>
-        <div class="product">
-            <img src="imagem/produto3.png" alt="Lolito">
-            <h2>Lolito</h2>
-            <p>Luxury big sofa</p>
-            <span class="price">Rp 7.000.000</span>
-            <span class="old-price">Rp 14.000.000</span>
-            <span class="discount">-50%</span>
-        </div>
-        <div class="product">
-            <img src="imagem/produto4.png" alt="Respira">
-            <h2>Respira</h2>
-            <p>Outdoor bar table and stool</p>
-            <span class="price">Rp 500.000</span>
+            <span class="price">Rp 510.000</span>
             <span class="new">New</span>
         </div>
     </div>
     <div id="products-container"></div>
-
-<div id="pagination-container">
-  <button id="prev-page">Anterior</button>
-  <span id="page-info"></span>
-  <button id="next-page">Próximo</button>
-</div>
-</div>
-
 
 <!-- Footer Section -->
 <footer>

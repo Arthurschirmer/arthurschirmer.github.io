@@ -37,7 +37,7 @@ function sortProducts(criteria) {
   });
 }
 let currentPage = 1;
-const productsPerPage = 4;
+let productsPerPage = parseInt(document.getElementById('show').value);
 let products = Array.from(document.querySelectorAll('.product'));
 let sortedProducts = [...products];
 
@@ -56,6 +56,8 @@ function renderProducts(pageNumber) {
 function updatePageInfo() {
   const totalPages = Math.ceil(sortedProducts.length / productsPerPage);
   document.getElementById('page-info').textContent = `Página ${currentPage} de ${totalPages}`;
+  document.getElementById('total-results').textContent = productsPerPage;
+  document.getElementById('total-count').textContent = sortedProducts.length;
 }
 
 function sortProducts(criteria) {
@@ -77,6 +79,12 @@ function sortProducts(criteria) {
   currentPage = 1;
   renderProducts(currentPage);
 }
+
+document.getElementById('show').addEventListener('change', () => {
+  productsPerPage = parseInt(document.getElementById('show').value);
+  currentPage = 1;
+  renderProducts(currentPage);
+});
 
 document.getElementById('prev-page').addEventListener('click', () => {
   if (currentPage > 1) {
